@@ -1,0 +1,3 @@
+# Signed bytes: never convert line endings.
+manifest.json -text
+manifest.json.sig -text
