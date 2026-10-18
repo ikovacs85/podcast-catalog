@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedAt": "2026-10-18T00:00:00Z",
-  "notes": "speed = estimated multiple of real time on a device of that tier (ASR, VAD) or tokens/s (LLM); refine after the P1 benchmarks. VAD models need catalog reader v2 (minAppVersion 2).",
+  "notes": "speed = estimated multiple of real time on a device of that tier (ASR, VAD), tokens/s (LLM) or sentences/s (translation); refine after the P1 benchmarks. VAD models need catalog reader v2 (minAppVersion 2); gzip-packed files (translation) need reader v3 (minAppVersion 3).",
   "models": [
     {
       "id": "whisper-tiny-q5_1",
@@ -194,6 +194,692 @@
           "url": "https://huggingface.co/ggml-org/whisper-vad/resolve/main/ggml-silero-v6.2.0.bin",
           "sizeBytes": 885098,
           "sha256": "2aa269b785eeb53a82983a20501ddf7c1d9c48e33ab63a41391ac6c9f7fb6987"
+        }
+      ]
+    },
+    {
+      "id": "mozilla-es-en",
+      "type": "translation",
+      "name": "Spanish → English",
+      "version": 1,
+      "engine": "bergamot",
+      "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
+      "languages": [
+        "es-en"
+      ],
+      "ramMb": 150,
+      "quality": 3,
+      "speed": {
+        "low": 10.0,
+        "mid": 25.0,
+        "high": 60.0
+      },
+      "minTier": "low",
+      "recommendedFor": [],
+      "minAppVersion": 3,
+      "license": "MPL-2.0",
+      "licenseUrl": "https://github.com/mozilla/firefox-translations-models/blob/main/LICENSE",
+      "files": [
+        {
+          "name": "model.esen.intgemm.alphas.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/es-en/retrain_hr_HbNjJ60BTwmVTbhfFxuduA/exported/model.esen.intgemm.alphas.bin.gz",
+          "sizeBytes": 23288494,
+          "sha256": "54247f1e057180bca1d404dfd5c12836f65bc96cef7af98e59e55acb8bd093b1",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 31561787
+        },
+        {
+          "name": "lex.50.50.esen.s2t.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/es-en/retrain_hr_HbNjJ60BTwmVTbhfFxuduA/exported/lex.50.50.esen.s2t.bin.gz",
+          "sizeBytes": 2543246,
+          "sha256": "3d7856bfa3b12804bdc80f12fd828fd9062c462113ab73fbf87c5c3b68420813",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 4636248
+        },
+        {
+          "name": "vocab.esen.spm",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/es-en/retrain_hr_HbNjJ60BTwmVTbhfFxuduA/exported/vocab.esen.spm.gz",
+          "sizeBytes": 409312,
+          "sha256": "1658b529b8858cf2e1e8cef2c4e2d69654d77b5f714ac52205864b336dfeb3ee",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 816054
+        }
+      ]
+    },
+    {
+      "id": "mozilla-en-es",
+      "type": "translation",
+      "name": "English → Spanish",
+      "version": 1,
+      "engine": "bergamot",
+      "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
+      "languages": [
+        "en-es"
+      ],
+      "ramMb": 150,
+      "quality": 3,
+      "speed": {
+        "low": 10.0,
+        "mid": 25.0,
+        "high": 60.0
+      },
+      "minTier": "low",
+      "recommendedFor": [],
+      "minAppVersion": 3,
+      "license": "MPL-2.0",
+      "licenseUrl": "https://github.com/mozilla/firefox-translations-models/blob/main/LICENSE",
+      "files": [
+        {
+          "name": "model.enes.intgemm.alphas.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/en-es/retrain_hr_fix_names_CUAEXUHoQum_cFqh-ZAryw/exported/model.enes.intgemm.alphas.bin.gz",
+          "sizeBytes": 22698792,
+          "sha256": "fe4025fde24a4d5f80533cfb7acd53d0eb7f194dfc2d8f427f0d4563cfb6ac06",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 31561787
+        },
+        {
+          "name": "lex.50.50.enes.s2t.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/en-es/retrain_hr_fix_names_CUAEXUHoQum_cFqh-ZAryw/exported/lex.50.50.enes.s2t.bin.gz",
+          "sizeBytes": 2265250,
+          "sha256": "37a067966f28ff0ba430fddb7412bc5b07afa2cd2fd5a46d9ad74045a1a06380",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 4198436
+        },
+        {
+          "name": "vocab.enes.spm",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/en-es/retrain_hr_fix_names_CUAEXUHoQum_cFqh-ZAryw/exported/vocab.enes.spm.gz",
+          "sizeBytes": 409312,
+          "sha256": "ae2760c04bc6eb5362b16e5c2f145c376bb04bac421c33ba3c0766805e6f03b3",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 816054
+        }
+      ]
+    },
+    {
+      "id": "mozilla-de-en",
+      "type": "translation",
+      "name": "German → English",
+      "version": 1,
+      "engine": "bergamot",
+      "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
+      "languages": [
+        "de-en"
+      ],
+      "ramMb": 150,
+      "quality": 4,
+      "speed": {
+        "low": 10.0,
+        "mid": 25.0,
+        "high": 60.0
+      },
+      "minTier": "low",
+      "recommendedFor": [],
+      "minAppVersion": 3,
+      "license": "MPL-2.0",
+      "licenseUrl": "https://github.com/mozilla/firefox-translations-models/blob/main/LICENSE",
+      "files": [
+        {
+          "name": "model.deen.intgemm.alphas.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/de-en/retrain_hr2_WZOW24i4QJmIib61LeHfwg/exported/model.deen.intgemm.alphas.bin.gz",
+          "sizeBytes": 22403755,
+          "sha256": "38b245bcfc23f6d61fd98a187436ea1320a38f41896df411b103df3e83f51681",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 31561787
+        },
+        {
+          "name": "lex.50.50.deen.s2t.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/de-en/retrain_hr2_WZOW24i4QJmIib61LeHfwg/exported/lex.50.50.deen.s2t.bin.gz",
+          "sizeBytes": 2626658,
+          "sha256": "231e9caf62e0e867775d5f4c1f4cfae21e37c70d9bf2bd628fa468aeeb2ba869",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 4945796
+        },
+        {
+          "name": "vocab.deen.spm",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/de-en/retrain_hr2_WZOW24i4QJmIib61LeHfwg/exported/vocab.deen.spm.gz",
+          "sizeBytes": 413879,
+          "sha256": "88dcd7fdbf20dc60837ce837244d0d55b20f7079f2cbd2ba8e63530632028310",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 810073
+        }
+      ]
+    },
+    {
+      "id": "mozilla-en-de",
+      "type": "translation",
+      "name": "English → German",
+      "version": 1,
+      "engine": "bergamot",
+      "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
+      "languages": [
+        "en-de"
+      ],
+      "ramMb": 150,
+      "quality": 4,
+      "speed": {
+        "low": 10.0,
+        "mid": 25.0,
+        "high": 60.0
+      },
+      "minTier": "low",
+      "recommendedFor": [],
+      "minAppVersion": 3,
+      "license": "MPL-2.0",
+      "licenseUrl": "https://github.com/mozilla/firefox-translations-models/blob/main/LICENSE",
+      "files": [
+        {
+          "name": "model.ende.intgemm.alphas.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/en-de/retrain_hr_fix_names_SCgGhxUPQ2WAECHLRtzrMg/exported/model.ende.intgemm.alphas.bin.gz",
+          "sizeBytes": 22992073,
+          "sha256": "e3a74458faba3ab2752ed8355c5e3979f13395279c8fc1bd3f54a3c2316e4975",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 31561787
+        },
+        {
+          "name": "lex.50.50.ende.s2t.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/en-de/retrain_hr_fix_names_SCgGhxUPQ2WAECHLRtzrMg/exported/lex.50.50.ende.s2t.bin.gz",
+          "sizeBytes": 2314750,
+          "sha256": "0370d79cda6fed5dfa8f9b2a0009459bd2766893825bb5b8b5114169d18da6c4",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 4347672
+        },
+        {
+          "name": "vocab.ende.spm",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/en-de/retrain_hr_fix_names_SCgGhxUPQ2WAECHLRtzrMg/exported/vocab.ende.spm.gz",
+          "sizeBytes": 413879,
+          "sha256": "3b2ddbfac73f994f151a8994447d6b3d41ab0d3435da56f79c233f34d03e45c2",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 810073
+        }
+      ]
+    },
+    {
+      "id": "mozilla-fr-en",
+      "type": "translation",
+      "name": "French → English",
+      "version": 1,
+      "engine": "bergamot",
+      "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
+      "languages": [
+        "fr-en"
+      ],
+      "ramMb": 150,
+      "quality": 4,
+      "speed": {
+        "low": 10.0,
+        "mid": 25.0,
+        "high": 60.0
+      },
+      "minTier": "low",
+      "recommendedFor": [],
+      "minAppVersion": 3,
+      "license": "MPL-2.0",
+      "licenseUrl": "https://github.com/mozilla/firefox-translations-models/blob/main/LICENSE",
+      "files": [
+        {
+          "name": "model.fren.intgemm.alphas.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/fr-en/retrain_hr_EFgIftH_RrCyzl5gjemVNg/exported/model.fren.intgemm.alphas.bin.gz",
+          "sizeBytes": 23175075,
+          "sha256": "06b1eeedd3944260d00a393d12ec7192490c5b7c930b97212faf4d5f5c90a2ee",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 31561787
+        },
+        {
+          "name": "lex.50.50.fren.s2t.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/fr-en/retrain_hr_EFgIftH_RrCyzl5gjemVNg/exported/lex.50.50.fren.s2t.bin.gz",
+          "sizeBytes": 2649934,
+          "sha256": "395aa7767220e1bcfc085f2b2787ff98005d0075e55451f1e0832885e3d9642a",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 4824120
+        },
+        {
+          "name": "vocab.fren.spm",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/fr-en/retrain_hr_EFgIftH_RrCyzl5gjemVNg/exported/vocab.fren.spm.gz",
+          "sizeBytes": 409706,
+          "sha256": "8d15b219ffd32327b4cabf0d94a05a4fecb8923a4f386badbcbe5e86ede453a7",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 814404
+        }
+      ]
+    },
+    {
+      "id": "mozilla-en-fr",
+      "type": "translation",
+      "name": "English → French",
+      "version": 1,
+      "engine": "bergamot",
+      "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
+      "languages": [
+        "en-fr"
+      ],
+      "ramMb": 150,
+      "quality": 4,
+      "speed": {
+        "low": 10.0,
+        "mid": 25.0,
+        "high": 60.0
+      },
+      "minTier": "low",
+      "recommendedFor": [],
+      "minAppVersion": 3,
+      "license": "MPL-2.0",
+      "licenseUrl": "https://github.com/mozilla/firefox-translations-models/blob/main/LICENSE",
+      "files": [
+        {
+          "name": "model.enfr.intgemm.alphas.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/en-fr/retrain_hr_NLIxDbE1TBGyOTI-zwZagw/exported/model.enfr.intgemm.alphas.bin.gz",
+          "sizeBytes": 23045432,
+          "sha256": "22cdaf3dc9a1da6e5818b5576737182467f3cd97e6fd6f94e4273eb7b56d1e3f",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 31561787
+        },
+        {
+          "name": "lex.50.50.enfr.s2t.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/en-fr/retrain_hr_NLIxDbE1TBGyOTI-zwZagw/exported/lex.50.50.enfr.s2t.bin.gz",
+          "sizeBytes": 2297334,
+          "sha256": "055987f0b585b61c4914fb4469e2392fda0b25d3f7784275974f920e7b631997",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 4372936
+        },
+        {
+          "name": "vocab.enfr.spm",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/en-fr/retrain_hr_NLIxDbE1TBGyOTI-zwZagw/exported/vocab.enfr.spm.gz",
+          "sizeBytes": 409706,
+          "sha256": "5dcadaad8191fb4eb7677bce07098a20221dec95976a4db796f3a17cc82b4541",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 814404
+        }
+      ]
+    },
+    {
+      "id": "mozilla-it-en",
+      "type": "translation",
+      "name": "Italian → English",
+      "version": 1,
+      "engine": "bergamot",
+      "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
+      "languages": [
+        "it-en"
+      ],
+      "ramMb": 150,
+      "quality": 4,
+      "speed": {
+        "low": 10.0,
+        "mid": 25.0,
+        "high": 60.0
+      },
+      "minTier": "low",
+      "recommendedFor": [],
+      "minAppVersion": 3,
+      "license": "MPL-2.0",
+      "licenseUrl": "https://github.com/mozilla/firefox-translations-models/blob/main/LICENSE",
+      "files": [
+        {
+          "name": "model.iten.intgemm.alphas.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/it-en/retrain_hr_d1nPDwVeSD6t-HdtWA4xNg/exported/model.iten.intgemm.alphas.bin.gz",
+          "sizeBytes": 23301774,
+          "sha256": "0bc7221c2730723ac4477e8aa1d1d5bd0b9c3450cb8d006a6f86fe5da9129c27",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 31561787
+        },
+        {
+          "name": "lex.50.50.iten.s2t.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/it-en/retrain_hr_d1nPDwVeSD6t-HdtWA4xNg/exported/lex.50.50.iten.s2t.bin.gz",
+          "sizeBytes": 2532929,
+          "sha256": "504877085b31edfa3d31a1918a9a42c20fcbf85ff018caf46c54641db5538e62",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 4713616
+        },
+        {
+          "name": "vocab.iten.spm",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/it-en/retrain_hr_d1nPDwVeSD6t-HdtWA4xNg/exported/vocab.iten.spm.gz",
+          "sizeBytes": 407598,
+          "sha256": "df05fae498f519a828eb388cd08ec1b7205a8bcaf2405a5feb9f5e30c49a0977",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 812724
+        }
+      ]
+    },
+    {
+      "id": "mozilla-en-it",
+      "type": "translation",
+      "name": "English → Italian",
+      "version": 1,
+      "engine": "bergamot",
+      "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
+      "languages": [
+        "en-it"
+      ],
+      "ramMb": 150,
+      "quality": 4,
+      "speed": {
+        "low": 10.0,
+        "mid": 25.0,
+        "high": 60.0
+      },
+      "minTier": "low",
+      "recommendedFor": [],
+      "minAppVersion": 3,
+      "license": "MPL-2.0",
+      "licenseUrl": "https://github.com/mozilla/firefox-translations-models/blob/main/LICENSE",
+      "files": [
+        {
+          "name": "model.enit.intgemm.alphas.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/en-it/retrain_hr_fix_names_GPSr_u8PSmC9fOx1ZDCHoA/exported/model.enit.intgemm.alphas.bin.gz",
+          "sizeBytes": 23892889,
+          "sha256": "cfff470e9f29e27132723589a8bc985648f92773410e5f6fc43293d9e19f97f1",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 31561787
+        },
+        {
+          "name": "lex.50.50.enit.s2t.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/en-it/retrain_hr_fix_names_GPSr_u8PSmC9fOx1ZDCHoA/exported/lex.50.50.enit.s2t.bin.gz",
+          "sizeBytes": 2209348,
+          "sha256": "cd7ef06c0b872c15286a9796f105eb62693f14665490546ac70ce1c6c8f16d47",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 4133192
+        },
+        {
+          "name": "vocab.enit.spm",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/en-it/retrain_hr_fix_names_GPSr_u8PSmC9fOx1ZDCHoA/exported/vocab.enit.spm.gz",
+          "sizeBytes": 407598,
+          "sha256": "8f99a6f493bf7e1a03fbba19928d7dc7bf9a1b7938238467f3e80a58c0d50485",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 812724
+        }
+      ]
+    },
+    {
+      "id": "mozilla-pt-en",
+      "type": "translation",
+      "name": "Portuguese → English",
+      "version": 1,
+      "engine": "bergamot",
+      "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
+      "languages": [
+        "pt-en"
+      ],
+      "ramMb": 150,
+      "quality": 4,
+      "speed": {
+        "low": 10.0,
+        "mid": 25.0,
+        "high": 60.0
+      },
+      "minTier": "low",
+      "recommendedFor": [],
+      "minAppVersion": 3,
+      "license": "MPL-2.0",
+      "licenseUrl": "https://github.com/mozilla/firefox-translations-models/blob/main/LICENSE",
+      "files": [
+        {
+          "name": "model.pten.intgemm.alphas.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/pt-en/retrain_hr_drxrs5bGSsOWvfK9lyZISw/exported/model.pten.intgemm.alphas.bin.gz",
+          "sizeBytes": 22700409,
+          "sha256": "f2d2bb46d452cef561d35504bd198fa6c6ffc47187ee987406a2ac05d9c3935f",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 31561787
+        },
+        {
+          "name": "lex.50.50.pten.s2t.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/pt-en/retrain_hr_drxrs5bGSsOWvfK9lyZISw/exported/lex.50.50.pten.s2t.bin.gz",
+          "sizeBytes": 2487847,
+          "sha256": "b31185389533a97177cbf68ea756b78bfbaa24d31a865d72c6ed203fa414b2f6",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 4634492
+        },
+        {
+          "name": "vocab.pten.spm",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/pt-en/retrain_hr_drxrs5bGSsOWvfK9lyZISw/exported/vocab.pten.spm.gz",
+          "sizeBytes": 408686,
+          "sha256": "28c9eb4fb13f8eb661f6bb098560a1bf368d25ff890275028ea9d4f3f97b0416",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 816726
+        }
+      ]
+    },
+    {
+      "id": "mozilla-en-pt",
+      "type": "translation",
+      "name": "English → Portuguese",
+      "version": 1,
+      "engine": "bergamot",
+      "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
+      "languages": [
+        "en-pt"
+      ],
+      "ramMb": 150,
+      "quality": 4,
+      "speed": {
+        "low": 10.0,
+        "mid": 25.0,
+        "high": 60.0
+      },
+      "minTier": "low",
+      "recommendedFor": [],
+      "minAppVersion": 3,
+      "license": "MPL-2.0",
+      "licenseUrl": "https://github.com/mozilla/firefox-translations-models/blob/main/LICENSE",
+      "files": [
+        {
+          "name": "model.enpt.intgemm.alphas.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/en-pt/retrain_hr_fix_names_Vnb0RUXTTd67hR-oLHM3eg/exported/model.enpt.intgemm.alphas.bin.gz",
+          "sizeBytes": 23340019,
+          "sha256": "afb5ae08a2e40b622cd191584cca1df00721fea43de85cec74191fc180370f08",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 31561787
+        },
+        {
+          "name": "lex.50.50.enpt.s2t.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/en-pt/retrain_hr_fix_names_Vnb0RUXTTd67hR-oLHM3eg/exported/lex.50.50.enpt.s2t.bin.gz",
+          "sizeBytes": 2117608,
+          "sha256": "265cff4ca31d3fc95628181de98cf668868b44903d69680284dc456aa4191545",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 3970340
+        },
+        {
+          "name": "vocab.enpt.spm",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/en-pt/retrain_hr_fix_names_Vnb0RUXTTd67hR-oLHM3eg/exported/vocab.enpt.spm.gz",
+          "sizeBytes": 408686,
+          "sha256": "c2fbaf26f10563c77fa95cca465ad3666f61dd08bfaef5bb170abd582901f389",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 816726
+        }
+      ]
+    },
+    {
+      "id": "mozilla-nl-en",
+      "type": "translation",
+      "name": "Dutch → English",
+      "version": 1,
+      "engine": "bergamot",
+      "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
+      "languages": [
+        "nl-en"
+      ],
+      "ramMb": 150,
+      "quality": 4,
+      "speed": {
+        "low": 10.0,
+        "mid": 25.0,
+        "high": 60.0
+      },
+      "minTier": "low",
+      "recommendedFor": [],
+      "minAppVersion": 3,
+      "license": "MPL-2.0",
+      "licenseUrl": "https://github.com/mozilla/firefox-translations-models/blob/main/LICENSE",
+      "files": [
+        {
+          "name": "model.nlen.intgemm.alphas.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/nl-en/retrain_hr_JbTCb42HREGvK8d6aOCjFQ/exported/model.nlen.intgemm.alphas.bin.gz",
+          "sizeBytes": 22647743,
+          "sha256": "ed02d0f965fa78335a7ef326337267c04c5c444a7261ab4cdeb82fcfbb67d617",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 31561787
+        },
+        {
+          "name": "lex.50.50.nlen.s2t.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/nl-en/retrain_hr_JbTCb42HREGvK8d6aOCjFQ/exported/lex.50.50.nlen.s2t.bin.gz",
+          "sizeBytes": 2616098,
+          "sha256": "ddc7811550e820a081353556f5b5bfdc907251a20850e945bfc887bcd28f8c56",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 4862412
+        },
+        {
+          "name": "vocab.nlen.spm",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/nl-en/retrain_hr_JbTCb42HREGvK8d6aOCjFQ/exported/vocab.nlen.spm.gz",
+          "sizeBytes": 410222,
+          "sha256": "12c2bb8bf4d7b39cba7dc1b3eb16232ea29f1325e963eb9a29d7cc886c306599",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 807708
+        }
+      ]
+    },
+    {
+      "id": "mozilla-en-nl",
+      "type": "translation",
+      "name": "English → Dutch",
+      "version": 1,
+      "engine": "bergamot",
+      "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
+      "languages": [
+        "en-nl"
+      ],
+      "ramMb": 150,
+      "quality": 4,
+      "speed": {
+        "low": 10.0,
+        "mid": 25.0,
+        "high": 60.0
+      },
+      "minTier": "low",
+      "recommendedFor": [],
+      "minAppVersion": 3,
+      "license": "MPL-2.0",
+      "licenseUrl": "https://github.com/mozilla/firefox-translations-models/blob/main/LICENSE",
+      "files": [
+        {
+          "name": "model.ennl.intgemm.alphas.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/en-nl/retrain_hr_fix_names_fR8XhBiBQniIbi4I_ebJ2Q/exported/model.ennl.intgemm.alphas.bin.gz",
+          "sizeBytes": 23386633,
+          "sha256": "a1ab24477ca1289e123e9a2817434f99b47b9b5e461ec65ad273f3dd394814a2",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 31561787
+        },
+        {
+          "name": "lex.50.50.ennl.s2t.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/en-nl/retrain_hr_fix_names_fR8XhBiBQniIbi4I_ebJ2Q/exported/lex.50.50.ennl.s2t.bin.gz",
+          "sizeBytes": 2155034,
+          "sha256": "b95c612e69270142c352589b4082b936810ec02ab7842c2a573bab6441709d06",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 4030624
+        },
+        {
+          "name": "vocab.ennl.spm",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/en-nl/retrain_hr_fix_names_fR8XhBiBQniIbi4I_ebJ2Q/exported/vocab.ennl.spm.gz",
+          "sizeBytes": 410222,
+          "sha256": "0b12be4ccd0ee5182ad7e8ecd3254eece806ae183bece90fa625ceae7c851f80",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 807708
+        }
+      ]
+    },
+    {
+      "id": "mozilla-hu-en",
+      "type": "translation",
+      "name": "Hungarian → English",
+      "version": 1,
+      "engine": "bergamot",
+      "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
+      "languages": [
+        "hu-en"
+      ],
+      "ramMb": 150,
+      "quality": 4,
+      "speed": {
+        "low": 10.0,
+        "mid": 25.0,
+        "high": 60.0
+      },
+      "minTier": "low",
+      "recommendedFor": [],
+      "minAppVersion": 3,
+      "license": "MPL-2.0",
+      "licenseUrl": "https://github.com/mozilla/firefox-translations-models/blob/main/LICENSE",
+      "files": [
+        {
+          "name": "model.huen.intgemm.alphas.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/hu-en/next26_ehk9UNnTTNCsQ0eZhWcNXg/exported/model.huen.intgemm.alphas.bin.gz",
+          "sizeBytes": 22582446,
+          "sha256": "d864f7fbac38f7c0e3d9472d5a66776130440f7505126dcbe2238b9ffe897e8f",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 31561787
+        },
+        {
+          "name": "lex.50.50.huen.s2t.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/hu-en/next26_ehk9UNnTTNCsQ0eZhWcNXg/exported/lex.50.50.huen.s2t.bin.gz",
+          "sizeBytes": 2433968,
+          "sha256": "1c3183ac06603c24bc591eb68f96bc8d7398a3e962ae406799b7fee064e2d35d",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 4847184
+        },
+        {
+          "name": "vocab.huen.spm",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/hu-en/next26_ehk9UNnTTNCsQ0eZhWcNXg/exported/vocab.huen.spm.gz",
+          "sizeBytes": 421716,
+          "sha256": "60fee5e35a452369e2920f6e2377d0da59df673945137af90040bfd46b3d5f6a",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 832895
+        }
+      ]
+    },
+    {
+      "id": "mozilla-en-hu",
+      "type": "translation",
+      "name": "English → Hungarian",
+      "version": 1,
+      "engine": "bergamot",
+      "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
+      "languages": [
+        "en-hu"
+      ],
+      "ramMb": 150,
+      "quality": 4,
+      "speed": {
+        "low": 10.0,
+        "mid": 25.0,
+        "high": 60.0
+      },
+      "minTier": "low",
+      "recommendedFor": [],
+      "minAppVersion": 3,
+      "license": "MPL-2.0",
+      "licenseUrl": "https://github.com/mozilla/firefox-translations-models/blob/main/LICENSE",
+      "files": [
+        {
+          "name": "model.enhu.intgemm.alphas.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/en-hu/next26_Tzv045N-SASkA8X287pEqg/exported/model.enhu.intgemm.alphas.bin.gz",
+          "sizeBytes": 22889950,
+          "sha256": "3c0d834c5b4542b5af34c2fe97cab15bd13f41192b4b5f1269c43d8376f8d5d8",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 31561787
+        },
+        {
+          "name": "lex.50.50.enhu.s2t.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/en-hu/next26_Tzv045N-SASkA8X287pEqg/exported/lex.50.50.enhu.s2t.bin.gz",
+          "sizeBytes": 1794658,
+          "sha256": "b504786f6e25eb788272d07cdaa331f9ff7e15728d272c2420319b2b172cf0ef",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 3419024
+        },
+        {
+          "name": "vocab.enhu.spm",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/en-hu/next26_Tzv045N-SASkA8X287pEqg/exported/vocab.enhu.spm.gz",
+          "sizeBytes": 421527,
+          "sha256": "a3d762e07561ede58968703ed9dbcb0b281fbb1a58c99160dd2cb1fffa2feb04",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 832855
         }
       ]
     },
