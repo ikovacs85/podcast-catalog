@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "generatedAt": "2026-10-18T00:00:00Z",
-  "notes": "speed = estimated multiple of real time on a device of that tier (ASR, VAD), tokens/s (LLM) or sentences/s (translation); refine after the P1 benchmarks. VAD models need catalog reader v2 (minAppVersion 2); gzip-packed files (translation) need reader v3 (minAppVersion 3).",
+  "notes": "speed = estimated multiple of real time on a device of that tier (ASR, VAD), tokens/s (LLM) or sentences/s (translation); refine after the P1 benchmarks. VAD models need catalog reader v2 (minAppVersion 2); gzip-packed files (translation) need reader v3 (minAppVersion 3). Language packs (languagePacks, P8) need reader v4 (minAppVersion 4); older apps ignore them.",
   "models": [
     {
       "id": "whisper-tiny-q5_1",
@@ -1008,5 +1008,205 @@
       ]
     }
   ],
-  "languagePacks": []
+  "languagePacks": [
+    {
+      "id": "langpack-es",
+      "name": "Spanish dictionary",
+      "description": "Offline Spanish dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation; word frequencies and stop words for vocabulary analysis.",
+      "language": "es",
+      "glossLanguages": [
+        "en"
+      ],
+      "version": 1,
+      "format": 1,
+      "minAppVersion": 4,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "files": [
+        {
+          "name": "es.sqlite",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v1/es-v1.sqlite.gz",
+          "sizeBytes": 15801173,
+          "sha256": "87d2f93839627000e41551d0988b378bf43660de8fb7e366782e7c369bfbed91",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 44142592
+        }
+      ]
+    },
+    {
+      "id": "langpack-de",
+      "name": "German dictionary",
+      "description": "Offline German dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation; word frequencies and stop words for vocabulary analysis.",
+      "language": "de",
+      "glossLanguages": [
+        "en"
+      ],
+      "version": 1,
+      "format": 1,
+      "minAppVersion": 4,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "files": [
+        {
+          "name": "de.sqlite",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v1/de-v1.sqlite.gz",
+          "sizeBytes": 10762613,
+          "sha256": "31f252a68234f12c56e4c15ed7893491e04f5de66e3d3d5f07ddef3279bcb1ee",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 29290496
+        }
+      ]
+    },
+    {
+      "id": "langpack-fr",
+      "name": "French dictionary",
+      "description": "Offline French dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation; word frequencies and stop words for vocabulary analysis.",
+      "language": "fr",
+      "glossLanguages": [
+        "en"
+      ],
+      "version": 1,
+      "format": 1,
+      "minAppVersion": 4,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "files": [
+        {
+          "name": "fr.sqlite",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v1/fr-v1.sqlite.gz",
+          "sizeBytes": 8309158,
+          "sha256": "f1cf0a294920b199f98e269fc507204943b8b59554589a10b3d51b3ee7462435",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 20623360
+        }
+      ]
+    },
+    {
+      "id": "langpack-it",
+      "name": "Italian dictionary",
+      "description": "Offline Italian dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation; word frequencies and stop words for vocabulary analysis.",
+      "language": "it",
+      "glossLanguages": [
+        "en"
+      ],
+      "version": 1,
+      "format": 1,
+      "minAppVersion": 4,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "files": [
+        {
+          "name": "it.sqlite",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v1/it-v1.sqlite.gz",
+          "sizeBytes": 16435378,
+          "sha256": "ca3e305f3667a72ed6564d06c209d1cf74cfcb6e5a2f6ee7cdf3bb3817cce3df",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 46891008
+        }
+      ]
+    },
+    {
+      "id": "langpack-pt",
+      "name": "Portuguese dictionary",
+      "description": "Offline Portuguese dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation; word frequencies and stop words for vocabulary analysis.",
+      "language": "pt",
+      "glossLanguages": [
+        "en"
+      ],
+      "version": 1,
+      "format": 1,
+      "minAppVersion": 4,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "files": [
+        {
+          "name": "pt.sqlite",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v1/pt-v1.sqlite.gz",
+          "sizeBytes": 8802545,
+          "sha256": "87563c9067ceaa4603f0e83e4a6b5b983bb643afa853666f5287126e88f733fd",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 23126016
+        }
+      ]
+    },
+    {
+      "id": "langpack-nl",
+      "name": "Dutch dictionary",
+      "description": "Offline Dutch dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation; word frequencies and stop words for vocabulary analysis.",
+      "language": "nl",
+      "glossLanguages": [
+        "en"
+      ],
+      "version": 1,
+      "format": 1,
+      "minAppVersion": 4,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "files": [
+        {
+          "name": "nl.sqlite",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v1/nl-v1.sqlite.gz",
+          "sizeBytes": 6049114,
+          "sha256": "9f2e01250e08f938f46a9a718381c926d0d4e2e50e795193e76b779d878eaa67",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 14589952
+        }
+      ]
+    },
+    {
+      "id": "langpack-hu",
+      "name": "Hungarian dictionary",
+      "description": "Offline Hungarian dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation; word frequencies and stop words for vocabulary analysis.",
+      "language": "hu",
+      "glossLanguages": [
+        "en"
+      ],
+      "version": 1,
+      "format": 1,
+      "minAppVersion": 4,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "files": [
+        {
+          "name": "hu.sqlite",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v1/hu-v1.sqlite.gz",
+          "sizeBytes": 11752505,
+          "sha256": "d24b34cdcfd744d473e970320719cf3de7752a614e7663941f9c26a9c15a2fa5",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 32284672
+        }
+      ]
+    },
+    {
+      "id": "langpack-en",
+      "name": "English dictionary",
+      "description": "Offline English dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation, translations into the app's other languages; word frequencies and stop words for vocabulary analysis.",
+      "language": "en",
+      "glossLanguages": [
+        "en",
+        "es",
+        "de",
+        "fr",
+        "it",
+        "pt",
+        "nl",
+        "hu"
+      ],
+      "version": 1,
+      "format": 1,
+      "minAppVersion": 4,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "files": [
+        {
+          "name": "en.sqlite",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v1/en-v1.sqlite.gz",
+          "sizeBytes": 23425510,
+          "sha256": "b4a827b3b7668ea6b39844f47ec23afcaee0de1a266a6a41bddaacee5c1e5e47",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 59871232
+        }
+      ]
+    }
+  ]
 }
