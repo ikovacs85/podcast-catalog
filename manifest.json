@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-18T00:00:00Z",
-  "notes": "speed = estimated multiple of real time on a device of that tier (ASR, VAD), tokens/s (LLM) or sentences/s (translation); refine after the P1 benchmarks. VAD models need catalog reader v2 (minAppVersion 2); gzip-packed files (translation) need reader v3 (minAppVersion 3). Language packs (languagePacks, P8) need reader v4 (minAppVersion 4); older apps ignore them.",
+  "generatedAt": "2026-10-23T00:00:00Z",
+  "notes": "speed = estimated multiple of real time on a device of that tier (ASR, VAD), tokens/s (LLM) or sentences/s (translation); refine after the P1 benchmarks. LLMs: chosen in P11.6 (Qwen3.5 2B mid, 4B high; ramMb measured at a 4096-token context); no LLM is recommended for low-tier phones. VAD models need catalog reader v2 (minAppVersion 2); gzip-packed files (translation) need reader v3 (minAppVersion 3). Language packs (languagePacks, P8) need reader v4 (minAppVersion 4); older apps ignore them.",
   "models": [
     {
       "id": "whisper-tiny-q5_1",
@@ -884,126 +884,77 @@
       ]
     },
     {
-      "id": "qwen2.5-0.5b-instruct-q4_k_m",
+      "id": "qwen3.5-2b-q4_k_m",
       "type": "llm",
-      "name": "Qwen 2.5 0.5B Instruct",
+      "name": "Qwen3.5 2B",
       "version": 1,
       "engine": "llama.cpp",
-      "description": "Small instruction-tuned language model (GGUF, 4-bit) for explanations and exercises.",
+      "description": "Small multilingual language model (GGUF, 4-bit) for explanations, translations and exercises.",
       "languages": [
-        "zh",
         "en",
-        "fr",
-        "es",
-        "pt",
         "de",
-        "it",
-        "ru",
-        "ja",
-        "ko",
-        "vi",
-        "th",
-        "ar"
-      ],
-      "ramMb": 800,
-      "quality": 2,
-      "speed": {
-        "low": 8.0,
-        "mid": 15.0,
-        "high": 30.0
-      },
-      "minTier": "low",
-      "recommendedFor": [
-        "low"
-      ],
-      "license": "Apache-2.0",
-      "licenseUrl": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct/blob/main/LICENSE",
-      "files": [
-        {
-          "name": "qwen2.5-0.5b-instruct-q4_k_m.gguf",
-          "url": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF/resolve/main/qwen2.5-0.5b-instruct-q4_k_m.gguf",
-          "sizeBytes": 491400032,
-          "sha256": "74a4da8c9fdbcd15bd1f6d01d621410d31c6fc00986f5eb687824e7b93d7a9db"
-        }
-      ]
-    },
-    {
-      "id": "qwen2.5-1.5b-instruct-q4_k_m",
-      "type": "llm",
-      "name": "Qwen 2.5 1.5B Instruct",
-      "version": 1,
-      "engine": "llama.cpp",
-      "description": "Small instruction-tuned language model (GGUF, 4-bit) for explanations and exercises.",
-      "languages": [
-        "zh",
-        "en",
-        "fr",
         "es",
-        "pt",
-        "de",
+        "fr",
+        "hu",
         "it",
-        "ru",
-        "ja",
-        "ko",
-        "vi",
-        "th",
-        "ar"
+        "nl",
+        "pt"
       ],
-      "ramMb": 1700,
+      "ramMb": 1800,
       "quality": 3,
       "speed": {
-        "mid": 8.0,
-        "high": 15.0
+        "mid": 10.0,
+        "high": 20.0
       },
       "minTier": "mid",
       "recommendedFor": [
         "mid"
       ],
       "license": "Apache-2.0",
-      "licenseUrl": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct/blob/main/LICENSE",
+      "licenseUrl": "https://huggingface.co/Qwen/Qwen3.5-2B/blob/main/LICENSE",
       "files": [
         {
-          "name": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
-          "url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/resolve/main/qwen2.5-1.5b-instruct-q4_k_m.gguf",
-          "sizeBytes": 1117320736,
-          "sha256": "6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e"
+          "name": "Qwen3.5-2B-Q4_K_M.gguf",
+          "url": "https://huggingface.co/unsloth/Qwen3.5-2B-GGUF/resolve/main/Qwen3.5-2B-Q4_K_M.gguf",
+          "sizeBytes": 1280835840,
+          "sha256": "aaf42c8b7c3cab2bf3d69c355048d4a0ee9973d48f16c731c0520ee914699223"
         }
       ]
     },
     {
-      "id": "llama-3.2-3b-instruct-q4_k_m",
+      "id": "qwen3.5-4b-q4_k_m",
       "type": "llm",
-      "name": "Llama 3.2 3B Instruct",
+      "name": "Qwen3.5 4B",
       "version": 1,
       "engine": "llama.cpp",
-      "description": "Small instruction-tuned language model (GGUF, 4-bit) for explanations and exercises.",
+      "description": "Multilingual language model (GGUF, 4-bit) for explanations, translations and exercises; best quality, needs a high-end phone.",
       "languages": [
         "en",
         "de",
-        "fr",
-        "it",
-        "pt",
-        "hi",
         "es",
-        "th"
+        "fr",
+        "hu",
+        "it",
+        "nl",
+        "pt"
       ],
-      "ramMb": 2900,
+      "ramMb": 2800,
       "quality": 4,
       "speed": {
-        "high": 8.0
+        "high": 10.0
       },
       "minTier": "high",
       "recommendedFor": [
         "high"
       ],
-      "license": "Llama 3.2 Community License",
-      "licenseUrl": "https://huggingface.co/meta-llama/Llama-3.2-3B-Instruct/blob/main/LICENSE.txt",
+      "license": "Apache-2.0",
+      "licenseUrl": "https://huggingface.co/Qwen/Qwen3.5-4B/blob/main/LICENSE",
       "files": [
         {
-          "name": "Llama-3.2-3B-Instruct-Q4_K_M.gguf",
-          "url": "https://huggingface.co/bartowski/Llama-3.2-3B-Instruct-GGUF/resolve/main/Llama-3.2-3B-Instruct-Q4_K_M.gguf",
-          "sizeBytes": 2019377696,
-          "sha256": "6c1a2b41161032677be168d354123594c0e6e67d2b9227c84f296ad037c728ff"
+          "name": "Qwen3.5-4B-Q4_K_M.gguf",
+          "url": "https://huggingface.co/unsloth/Qwen3.5-4B-GGUF/resolve/main/Qwen3.5-4B-Q4_K_M.gguf",
+          "sizeBytes": 2740937888,
+          "sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4"
         }
       ]
     }
