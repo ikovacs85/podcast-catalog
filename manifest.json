@@ -968,7 +968,7 @@
       "glossLanguages": [
         "en"
       ],
-      "version": 2,
+      "version": 3,
       "format": 1,
       "minAppVersion": 4,
       "license": "CC BY-SA 4.0",
@@ -976,11 +976,11 @@
       "files": [
         {
           "name": "es.sqlite",
-          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v2/es-v2.sqlite.gz",
-          "sizeBytes": 15808304,
-          "sha256": "92e976d600af4fbbe68daea027af22e4be6371739939238d3329e50a4e529c9e",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v3/es-v3.sqlite.gz",
+          "sizeBytes": 15798276,
+          "sha256": "c60e307f7ce55d3e93868261a836c53eaa83af9aee551968ed4fe5f0cad7289c",
           "compression": "gzip",
-          "uncompressedSizeBytes": 44158976
+          "uncompressedSizeBytes": 44146688
         }
       ]
     },
@@ -992,7 +992,7 @@
       "glossLanguages": [
         "en"
       ],
-      "version": 2,
+      "version": 3,
       "format": 1,
       "minAppVersion": 4,
       "license": "CC BY-SA 4.0",
@@ -1000,9 +1000,9 @@
       "files": [
         {
           "name": "de.sqlite",
-          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v2/de-v2.sqlite.gz",
-          "sizeBytes": 10769734,
-          "sha256": "7059e138a8f3f3202da4945b1d4cdf667eb3c84e65f4d14d71fb4ebf1a0095ae",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v3/de-v3.sqlite.gz",
+          "sizeBytes": 10764859,
+          "sha256": "63c9e78d4be50dc5c25f4792dd56f8253eb825943c05a2fb4902d154008a3eb2",
           "compression": "gzip",
           "uncompressedSizeBytes": 29306880
         }
@@ -1016,7 +1016,7 @@
       "glossLanguages": [
         "en"
       ],
-      "version": 2,
+      "version": 3,
       "format": 1,
       "minAppVersion": 4,
       "license": "CC BY-SA 4.0",
@@ -1024,11 +1024,11 @@
       "files": [
         {
           "name": "fr.sqlite",
-          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v2/fr-v2.sqlite.gz",
-          "sizeBytes": 8316381,
-          "sha256": "b2d1e156a96cc1bd6c407503e6ef09ec4de2f1c1cfdc7f991fefd8666df8bfbe",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v3/fr-v3.sqlite.gz",
+          "sizeBytes": 8309673,
+          "sha256": "88f48ef30efb021d8d4f20b0cb76ff23e8b3e7c931dface22572e178d3732fbc",
           "compression": "gzip",
-          "uncompressedSizeBytes": 20639744
+          "uncompressedSizeBytes": 20635648
         }
       ]
     },
@@ -1040,7 +1040,7 @@
       "glossLanguages": [
         "en"
       ],
-      "version": 2,
+      "version": 3,
       "format": 1,
       "minAppVersion": 4,
       "license": "CC BY-SA 4.0",
@@ -1048,11 +1048,11 @@
       "files": [
         {
           "name": "it.sqlite",
-          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v2/it-v2.sqlite.gz",
-          "sizeBytes": 16442239,
-          "sha256": "c17de281a4118e2343d022aad710e876a9a8bd04f53107007180c3c7b73dc0fc",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v3/it-v3.sqlite.gz",
+          "sizeBytes": 16430435,
+          "sha256": "d26c2529d3a23a45e84d77e3ff8891ab13e9d700009cef695695f1a44f8d56d6",
           "compression": "gzip",
-          "uncompressedSizeBytes": 46907392
+          "uncompressedSizeBytes": 46899200
         }
       ]
     },
@@ -1064,7 +1064,7 @@
       "glossLanguages": [
         "en"
       ],
-      "version": 2,
+      "version": 3,
       "format": 1,
       "minAppVersion": 4,
       "license": "CC BY-SA 4.0",
@@ -1072,11 +1072,11 @@
       "files": [
         {
           "name": "pt.sqlite",
-          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v2/pt-v2.sqlite.gz",
-          "sizeBytes": 8808998,
-          "sha256": "5a54772d9258d06dceacc539afe5d0a5fc5f423096eb71693e0b06cf435e1921",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v3/pt-v3.sqlite.gz",
+          "sizeBytes": 8801539,
+          "sha256": "a72a909f5c4685f77320cf2efeb5126d3f2c309d510dab4557e576dec8809b6f",
           "compression": "gzip",
-          "uncompressedSizeBytes": 23138304
+          "uncompressedSizeBytes": 23130112
         }
       ]
     },
@@ -1088,7 +1088,7 @@
       "glossLanguages": [
         "en"
       ],
-      "version": 2,
+      "version": 3,
       "format": 1,
       "minAppVersion": 4,
       "license": "CC BY-SA 4.0",
@@ -1096,9 +1096,9 @@
       "files": [
         {
           "name": "nl.sqlite",
-          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v2/nl-v2.sqlite.gz",
-          "sizeBytes": 6055913,
-          "sha256": "c59e6dd50d57822e928d21ebb0910447d1f0dc7eae60515a747b2087352a5fc3",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v3/nl-v3.sqlite.gz",
+          "sizeBytes": 6052586,
+          "sha256": "3540fb95962736b376b83007da1c96e872483a0ac417e6ab7c510edca10e3891",
           "compression": "gzip",
           "uncompressedSizeBytes": 14606336
         }
@@ -1112,7 +1112,7 @@
       "glossLanguages": [
         "en"
       ],
-      "version": 2,
+      "version": 3,
       "format": 1,
       "minAppVersion": 4,
       "license": "CC BY-SA 4.0",
@@ -1120,9 +1120,9 @@
       "files": [
         {
           "name": "hu.sqlite",
-          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v2/hu-v2.sqlite.gz",
-          "sizeBytes": 11760523,
-          "sha256": "639e0d4b2b269745bbf4702ccf74eb2e9f24198764f116a21f6a86395c44728e",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v3/hu-v3.sqlite.gz",
+          "sizeBytes": 11758660,
+          "sha256": "ac256cce565fb4fbacd04f949177276f7dc57db902410794f12298bd849483d3",
           "compression": "gzip",
           "uncompressedSizeBytes": 32301056
         }
@@ -1143,7 +1143,7 @@
         "nl",
         "hu"
       ],
-      "version": 2,
+      "version": 3,
       "format": 1,
       "minAppVersion": 4,
       "license": "CC BY-SA 4.0",
@@ -1151,11 +1151,11 @@
       "files": [
         {
           "name": "en.sqlite",
-          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v2/en-v2.sqlite.gz",
-          "sizeBytes": 23433093,
-          "sha256": "5bee02f30217466c3d7652422bf3a89364032d043e8055bbf5a9a424ec243aab",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v3/en-v3.sqlite.gz",
+          "sizeBytes": 23372015,
+          "sha256": "ef77012fa0f9d61e8fe2972c75e542be348791a95fa3a254dc72eb3af2999803",
           "compression": "gzip",
-          "uncompressedSizeBytes": 59887616
+          "uncompressedSizeBytes": 59731968
         }
       ]
     }
