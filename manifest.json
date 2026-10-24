@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-23T00:00:00Z",
+  "generatedAt": "2026-10-24T00:00:00Z",
   "notes": "speed = estimated multiple of real time on a device of that tier (ASR, VAD), tokens/s (LLM) or sentences/s (translation); refine after the P1 benchmarks. LLMs: chosen in P11.6 (Qwen3.5 2B mid, 4B high; ramMb measured at a 4096-token context); no LLM is recommended for low-tier phones. VAD models need catalog reader v2 (minAppVersion 2); gzip-packed files (translation) need reader v3 (minAppVersion 3). Language packs (languagePacks, P8) need reader v4 (minAppVersion 4); older apps ignore them.",
   "models": [
     {
@@ -200,7 +200,7 @@
     {
       "id": "mozilla-es-en",
       "type": "translation",
-      "name": "Spanish → English",
+      "name": "Spanish \u2192 English",
       "version": 1,
       "engine": "bergamot",
       "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
@@ -249,7 +249,7 @@
     {
       "id": "mozilla-en-es",
       "type": "translation",
-      "name": "English → Spanish",
+      "name": "English \u2192 Spanish",
       "version": 1,
       "engine": "bergamot",
       "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
@@ -298,7 +298,7 @@
     {
       "id": "mozilla-de-en",
       "type": "translation",
-      "name": "German → English",
+      "name": "German \u2192 English",
       "version": 1,
       "engine": "bergamot",
       "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
@@ -347,7 +347,7 @@
     {
       "id": "mozilla-en-de",
       "type": "translation",
-      "name": "English → German",
+      "name": "English \u2192 German",
       "version": 1,
       "engine": "bergamot",
       "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
@@ -396,7 +396,7 @@
     {
       "id": "mozilla-fr-en",
       "type": "translation",
-      "name": "French → English",
+      "name": "French \u2192 English",
       "version": 1,
       "engine": "bergamot",
       "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
@@ -445,7 +445,7 @@
     {
       "id": "mozilla-en-fr",
       "type": "translation",
-      "name": "English → French",
+      "name": "English \u2192 French",
       "version": 1,
       "engine": "bergamot",
       "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
@@ -494,7 +494,7 @@
     {
       "id": "mozilla-it-en",
       "type": "translation",
-      "name": "Italian → English",
+      "name": "Italian \u2192 English",
       "version": 1,
       "engine": "bergamot",
       "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
@@ -543,7 +543,7 @@
     {
       "id": "mozilla-en-it",
       "type": "translation",
-      "name": "English → Italian",
+      "name": "English \u2192 Italian",
       "version": 1,
       "engine": "bergamot",
       "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
@@ -592,7 +592,7 @@
     {
       "id": "mozilla-pt-en",
       "type": "translation",
-      "name": "Portuguese → English",
+      "name": "Portuguese \u2192 English",
       "version": 1,
       "engine": "bergamot",
       "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
@@ -641,7 +641,7 @@
     {
       "id": "mozilla-en-pt",
       "type": "translation",
-      "name": "English → Portuguese",
+      "name": "English \u2192 Portuguese",
       "version": 1,
       "engine": "bergamot",
       "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
@@ -690,7 +690,7 @@
     {
       "id": "mozilla-nl-en",
       "type": "translation",
-      "name": "Dutch → English",
+      "name": "Dutch \u2192 English",
       "version": 1,
       "engine": "bergamot",
       "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
@@ -739,7 +739,7 @@
     {
       "id": "mozilla-en-nl",
       "type": "translation",
-      "name": "English → Dutch",
+      "name": "English \u2192 Dutch",
       "version": 1,
       "engine": "bergamot",
       "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
@@ -788,7 +788,7 @@
     {
       "id": "mozilla-hu-en",
       "type": "translation",
-      "name": "Hungarian → English",
+      "name": "Hungarian \u2192 English",
       "version": 1,
       "engine": "bergamot",
       "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
@@ -837,7 +837,7 @@
     {
       "id": "mozilla-en-hu",
       "type": "translation",
-      "name": "English → Hungarian",
+      "name": "English \u2192 Hungarian",
       "version": 1,
       "engine": "bergamot",
       "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
@@ -963,12 +963,12 @@
     {
       "id": "langpack-es",
       "name": "Spanish dictionary",
-      "description": "Offline Spanish dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation; word frequencies and stop words for vocabulary analysis.",
+      "description": "Offline Spanish dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation; word frequencies, stop words and grammar topics for vocabulary and grammar analysis.",
       "language": "es",
       "glossLanguages": [
         "en"
       ],
-      "version": 1,
+      "version": 2,
       "format": 1,
       "minAppVersion": 4,
       "license": "CC BY-SA 4.0",
@@ -976,23 +976,23 @@
       "files": [
         {
           "name": "es.sqlite",
-          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v1/es-v1.sqlite.gz",
-          "sizeBytes": 15801173,
-          "sha256": "87d2f93839627000e41551d0988b378bf43660de8fb7e366782e7c369bfbed91",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v2/es-v2.sqlite.gz",
+          "sizeBytes": 15808304,
+          "sha256": "92e976d600af4fbbe68daea027af22e4be6371739939238d3329e50a4e529c9e",
           "compression": "gzip",
-          "uncompressedSizeBytes": 44142592
+          "uncompressedSizeBytes": 44158976
         }
       ]
     },
     {
       "id": "langpack-de",
       "name": "German dictionary",
-      "description": "Offline German dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation; word frequencies and stop words for vocabulary analysis.",
+      "description": "Offline German dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation; word frequencies, stop words and grammar topics for vocabulary and grammar analysis.",
       "language": "de",
       "glossLanguages": [
         "en"
       ],
-      "version": 1,
+      "version": 2,
       "format": 1,
       "minAppVersion": 4,
       "license": "CC BY-SA 4.0",
@@ -1000,23 +1000,23 @@
       "files": [
         {
           "name": "de.sqlite",
-          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v1/de-v1.sqlite.gz",
-          "sizeBytes": 10762613,
-          "sha256": "31f252a68234f12c56e4c15ed7893491e04f5de66e3d3d5f07ddef3279bcb1ee",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v2/de-v2.sqlite.gz",
+          "sizeBytes": 10769734,
+          "sha256": "7059e138a8f3f3202da4945b1d4cdf667eb3c84e65f4d14d71fb4ebf1a0095ae",
           "compression": "gzip",
-          "uncompressedSizeBytes": 29290496
+          "uncompressedSizeBytes": 29306880
         }
       ]
     },
     {
       "id": "langpack-fr",
       "name": "French dictionary",
-      "description": "Offline French dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation; word frequencies and stop words for vocabulary analysis.",
+      "description": "Offline French dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation; word frequencies, stop words and grammar topics for vocabulary and grammar analysis.",
       "language": "fr",
       "glossLanguages": [
         "en"
       ],
-      "version": 1,
+      "version": 2,
       "format": 1,
       "minAppVersion": 4,
       "license": "CC BY-SA 4.0",
@@ -1024,23 +1024,23 @@
       "files": [
         {
           "name": "fr.sqlite",
-          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v1/fr-v1.sqlite.gz",
-          "sizeBytes": 8309158,
-          "sha256": "f1cf0a294920b199f98e269fc507204943b8b59554589a10b3d51b3ee7462435",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v2/fr-v2.sqlite.gz",
+          "sizeBytes": 8316381,
+          "sha256": "b2d1e156a96cc1bd6c407503e6ef09ec4de2f1c1cfdc7f991fefd8666df8bfbe",
           "compression": "gzip",
-          "uncompressedSizeBytes": 20623360
+          "uncompressedSizeBytes": 20639744
         }
       ]
     },
     {
       "id": "langpack-it",
       "name": "Italian dictionary",
-      "description": "Offline Italian dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation; word frequencies and stop words for vocabulary analysis.",
+      "description": "Offline Italian dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation; word frequencies, stop words and grammar topics for vocabulary and grammar analysis.",
       "language": "it",
       "glossLanguages": [
         "en"
       ],
-      "version": 1,
+      "version": 2,
       "format": 1,
       "minAppVersion": 4,
       "license": "CC BY-SA 4.0",
@@ -1048,23 +1048,23 @@
       "files": [
         {
           "name": "it.sqlite",
-          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v1/it-v1.sqlite.gz",
-          "sizeBytes": 16435378,
-          "sha256": "ca3e305f3667a72ed6564d06c209d1cf74cfcb6e5a2f6ee7cdf3bb3817cce3df",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v2/it-v2.sqlite.gz",
+          "sizeBytes": 16442239,
+          "sha256": "c17de281a4118e2343d022aad710e876a9a8bd04f53107007180c3c7b73dc0fc",
           "compression": "gzip",
-          "uncompressedSizeBytes": 46891008
+          "uncompressedSizeBytes": 46907392
         }
       ]
     },
     {
       "id": "langpack-pt",
       "name": "Portuguese dictionary",
-      "description": "Offline Portuguese dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation; word frequencies and stop words for vocabulary analysis.",
+      "description": "Offline Portuguese dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation; word frequencies, stop words and grammar topics for vocabulary and grammar analysis.",
       "language": "pt",
       "glossLanguages": [
         "en"
       ],
-      "version": 1,
+      "version": 2,
       "format": 1,
       "minAppVersion": 4,
       "license": "CC BY-SA 4.0",
@@ -1072,23 +1072,23 @@
       "files": [
         {
           "name": "pt.sqlite",
-          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v1/pt-v1.sqlite.gz",
-          "sizeBytes": 8802545,
-          "sha256": "87563c9067ceaa4603f0e83e4a6b5b983bb643afa853666f5287126e88f733fd",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v2/pt-v2.sqlite.gz",
+          "sizeBytes": 8808998,
+          "sha256": "5a54772d9258d06dceacc539afe5d0a5fc5f423096eb71693e0b06cf435e1921",
           "compression": "gzip",
-          "uncompressedSizeBytes": 23126016
+          "uncompressedSizeBytes": 23138304
         }
       ]
     },
     {
       "id": "langpack-nl",
       "name": "Dutch dictionary",
-      "description": "Offline Dutch dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation; word frequencies and stop words for vocabulary analysis.",
+      "description": "Offline Dutch dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation; word frequencies, stop words and grammar topics for vocabulary and grammar analysis.",
       "language": "nl",
       "glossLanguages": [
         "en"
       ],
-      "version": 1,
+      "version": 2,
       "format": 1,
       "minAppVersion": 4,
       "license": "CC BY-SA 4.0",
@@ -1096,23 +1096,23 @@
       "files": [
         {
           "name": "nl.sqlite",
-          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v1/nl-v1.sqlite.gz",
-          "sizeBytes": 6049114,
-          "sha256": "9f2e01250e08f938f46a9a718381c926d0d4e2e50e795193e76b779d878eaa67",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v2/nl-v2.sqlite.gz",
+          "sizeBytes": 6055913,
+          "sha256": "c59e6dd50d57822e928d21ebb0910447d1f0dc7eae60515a747b2087352a5fc3",
           "compression": "gzip",
-          "uncompressedSizeBytes": 14589952
+          "uncompressedSizeBytes": 14606336
         }
       ]
     },
     {
       "id": "langpack-hu",
       "name": "Hungarian dictionary",
-      "description": "Offline Hungarian dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation; word frequencies and stop words for vocabulary analysis.",
+      "description": "Offline Hungarian dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation; word frequencies, stop words and grammar topics for vocabulary and grammar analysis.",
       "language": "hu",
       "glossLanguages": [
         "en"
       ],
-      "version": 1,
+      "version": 2,
       "format": 1,
       "minAppVersion": 4,
       "license": "CC BY-SA 4.0",
@@ -1120,18 +1120,18 @@
       "files": [
         {
           "name": "hu.sqlite",
-          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v1/hu-v1.sqlite.gz",
-          "sizeBytes": 11752505,
-          "sha256": "d24b34cdcfd744d473e970320719cf3de7752a614e7663941f9c26a9c15a2fa5",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v2/hu-v2.sqlite.gz",
+          "sizeBytes": 11760523,
+          "sha256": "639e0d4b2b269745bbf4702ccf74eb2e9f24198764f116a21f6a86395c44728e",
           "compression": "gzip",
-          "uncompressedSizeBytes": 32284672
+          "uncompressedSizeBytes": 32301056
         }
       ]
     },
     {
       "id": "langpack-en",
       "name": "English dictionary",
-      "description": "Offline English dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation, translations into the app's other languages; word frequencies and stop words for vocabulary analysis.",
+      "description": "Offline English dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation, translations into the app's other languages; word frequencies, stop words and grammar topics for vocabulary and grammar analysis.",
       "language": "en",
       "glossLanguages": [
         "en",
@@ -1143,7 +1143,7 @@
         "nl",
         "hu"
       ],
-      "version": 1,
+      "version": 2,
       "format": 1,
       "minAppVersion": 4,
       "license": "CC BY-SA 4.0",
@@ -1151,11 +1151,11 @@
       "files": [
         {
           "name": "en.sqlite",
-          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v1/en-v1.sqlite.gz",
-          "sizeBytes": 23425510,
-          "sha256": "b4a827b3b7668ea6b39844f47ec23afcaee0de1a266a6a41bddaacee5c1e5e47",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v2/en-v2.sqlite.gz",
+          "sizeBytes": 23433093,
+          "sha256": "5bee02f30217466c3d7652422bf3a89364032d043e8055bbf5a9a424ec243aab",
           "compression": "gzip",
-          "uncompressedSizeBytes": 59871232
+          "uncompressedSizeBytes": 59887616
         }
       ]
     }
