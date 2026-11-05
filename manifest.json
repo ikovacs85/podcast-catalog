@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-11-05T00:00:00Z",
+  "generatedAt": "2026-11-05T12:00:00Z",
   "notes": "speed = estimated multiple of real time on a device of that tier (ASR, VAD), tokens/s (LLM) or sentences/s (translation); refine after the P1 benchmarks. LLMs: chosen in P11.6 (Qwen3.5 2B mid, 4B high; ramMb measured at a 4096-token context), Gemma 4 E2B for Turkish (needs reader v5, minAppVersion 5); no LLM is recommended for low-tier phones. VAD models need catalog reader v2 (minAppVersion 2); gzip-packed files (translation) need reader v3 (minAppVersion 3). Language packs (languagePacks, P8) need reader v4 (minAppVersion 4); older apps ignore them. The Turkish pack needs reader v5 (Turkish casing and apostrophes in lookups).",
   "models": [
     {
@@ -1300,7 +1300,7 @@
       "glossLanguages": [
         "en"
       ],
-      "version": 4,
+      "version": 5,
       "format": 1,
       "minAppVersion": 5,
       "license": "CC BY-SA 4.0",
@@ -1308,11 +1308,11 @@
       "files": [
         {
           "name": "tr.sqlite",
-          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v4/tr-v4.sqlite.gz",
-          "sizeBytes": 16673451,
-          "sha256": "ce7d4797e5a74c373ee2490cab2b6ee367474c6c41439071bcd23c486633e2c4",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v5/tr-v5.sqlite.gz",
+          "sizeBytes": 16776147,
+          "sha256": "decaa1531049a87fa2733b5445573ad646d99d03384c84434f4aed231b4d827f",
           "compression": "gzip",
-          "uncompressedSizeBytes": 55906304
+          "uncompressedSizeBytes": 56176640
         }
       ]
     }
