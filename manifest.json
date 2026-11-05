@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-10-24T00:00:00Z",
-  "notes": "speed = estimated multiple of real time on a device of that tier (ASR, VAD), tokens/s (LLM) or sentences/s (translation); refine after the P1 benchmarks. LLMs: chosen in P11.6 (Qwen3.5 2B mid, 4B high; ramMb measured at a 4096-token context); no LLM is recommended for low-tier phones. VAD models need catalog reader v2 (minAppVersion 2); gzip-packed files (translation) need reader v3 (minAppVersion 3). Language packs (languagePacks, P8) need reader v4 (minAppVersion 4); older apps ignore them.",
+  "generatedAt": "2026-11-05T00:00:00Z",
+  "notes": "speed = estimated multiple of real time on a device of that tier (ASR, VAD), tokens/s (LLM) or sentences/s (translation); refine after the P1 benchmarks. LLMs: chosen in P11.6 (Qwen3.5 2B mid, 4B high; ramMb measured at a 4096-token context), Gemma 4 E2B for Turkish (needs reader v5, minAppVersion 5); no LLM is recommended for low-tier phones. VAD models need catalog reader v2 (minAppVersion 2); gzip-packed files (translation) need reader v3 (minAppVersion 3). Language packs (languagePacks, P8) need reader v4 (minAppVersion 4); older apps ignore them. The Turkish pack needs reader v5 (Turkish casing and apostrophes in lookups).",
   "models": [
     {
       "id": "whisper-tiny-q5_1",
@@ -884,6 +884,104 @@
       ]
     },
     {
+      "id": "mozilla-tr-en",
+      "type": "translation",
+      "name": "Turkish \u2192 English",
+      "version": 1,
+      "engine": "bergamot",
+      "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
+      "languages": [
+        "tr-en"
+      ],
+      "ramMb": 150,
+      "quality": 4,
+      "speed": {
+        "low": 10.0,
+        "mid": 25.0,
+        "high": 60.0
+      },
+      "minTier": "low",
+      "recommendedFor": [],
+      "minAppVersion": 3,
+      "license": "MPL-2.0",
+      "licenseUrl": "https://github.com/mozilla/firefox-translations-models/blob/main/LICENSE",
+      "files": [
+        {
+          "name": "model.tren.intgemm.alphas.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/tr-en/statmt_xxxxxxxxRxSxxxxxxxxxxA/exported/model.tren.intgemm.alphas.bin.gz",
+          "sizeBytes": 12362908,
+          "sha256": "0939c2d12325a2f80a92d3c3ddaf718510837d03ee59303aa963b179368ec68a",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 17140836
+        },
+        {
+          "name": "lex.50.50.tren.s2t.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/tr-en/statmt_xxxxxxxxRxSxxxxxxxxxxA/exported/lex.50.50.tren.s2t.bin.gz",
+          "sizeBytes": 2470683,
+          "sha256": "e06304247fc4dfd55fcab21bfc9656a28f81fcf8efb2ccb0a5796b296bfeac1b",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 4662492
+        },
+        {
+          "name": "vocab.tren.spm",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/tr-en/statmt_xxxxxxxxRxSxxxxxxxxxxA/exported/vocab.tren.spm.gz",
+          "sizeBytes": 409060,
+          "sha256": "dfa22c3d15a6bdfb7765edc9e42c77daff8597a9ebe088fe886094ff0baeaef1",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 811353
+        }
+      ]
+    },
+    {
+      "id": "mozilla-en-tr",
+      "type": "translation",
+      "name": "English \u2192 Turkish",
+      "version": 1,
+      "engine": "bergamot",
+      "description": "Firefox Translations model (Mozilla), runs offline with Bergamot.",
+      "languages": [
+        "en-tr"
+      ],
+      "ramMb": 150,
+      "quality": 4,
+      "speed": {
+        "low": 10.0,
+        "mid": 25.0,
+        "high": 60.0
+      },
+      "minTier": "low",
+      "recommendedFor": [],
+      "minAppVersion": 3,
+      "license": "MPL-2.0",
+      "licenseUrl": "https://github.com/mozilla/firefox-translations-models/blob/main/LICENSE",
+      "files": [
+        {
+          "name": "model.entr.intgemm.alphas.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/en-tr/spring-2024_LiFGeNrEQpKdNlziG2qP_A/exported/model.entr.intgemm.alphas.bin.gz",
+          "sizeBytes": 13159314,
+          "sha256": "52d10136b1a4804879989aa9ee146e83ced75aa0ce2d371b4e582473ed6b9020",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 17141051
+        },
+        {
+          "name": "lex.50.50.entr.s2t.bin",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/en-tr/spring-2024_LiFGeNrEQpKdNlziG2qP_A/exported/lex.50.50.entr.s2t.bin.gz",
+          "sizeBytes": 1546258,
+          "sha256": "cf74d4edec0b51affd30a43e6bd2c2274bf4ce7fd54c24fd293db2c5c4bf043d",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 3261300
+        },
+        {
+          "name": "vocab.entr.spm",
+          "url": "https://storage.googleapis.com/moz-fx-translations-data--303e-prod-translations-data/models/en-tr/spring-2024_LiFGeNrEQpKdNlziG2qP_A/exported/vocab.entr.spm.gz",
+          "sizeBytes": 395473,
+          "sha256": "01e55973e65a34c5efbdce3968857d4e53998b4bef131c5125a19f8e44d8f87c",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 798793
+        }
+      ]
+    },
+    {
       "id": "qwen3.5-2b-q4_k_m",
       "type": "llm",
       "name": "Qwen3.5 2B",
@@ -953,6 +1051,42 @@
           "url": "https://huggingface.co/unsloth/Qwen3.5-4B-GGUF/resolve/main/Qwen3.5-4B-Q4_K_M.gguf",
           "sizeBytes": 2740937888,
           "sha256": "00fe7986ff5f6b463e62455821146049db6f9313603938a70800d1fb69ef11a4"
+        }
+      ]
+    },
+    {
+      "id": "gemma-4-e2b-q4_k_m",
+      "type": "llm",
+      "name": "Gemma 4 E2B",
+      "version": 1,
+      "engine": "llama.cpp",
+      "description": "Multilingual language model by Google (GGUF, 4-bit) for explanations, translations and exercises; the one that writes Turkish well. Needs a high-end phone.",
+      "languages": [
+        "en",
+        "de",
+        "es",
+        "fr",
+        "it",
+        "nl",
+        "pt",
+        "tr"
+      ],
+      "ramMb": 2800,
+      "quality": 4,
+      "speed": {
+        "high": 15.0
+      },
+      "minTier": "high",
+      "recommendedFor": [],
+      "minAppVersion": 5,
+      "license": "Apache-2.0",
+      "licenseUrl": "https://ai.google.dev/gemma/docs/gemma_4_license",
+      "files": [
+        {
+          "name": "gemma-4-E2B-it-Q4_K_M.gguf",
+          "url": "https://huggingface.co/unsloth/gemma-4-E2B-it-GGUF/resolve/main/gemma-4-E2B-it-Q4_K_M.gguf",
+          "sizeBytes": 3106738272,
+          "sha256": "740185b21d22ceb83a11c3aa62ad5842ef32c70f6096d756bbee85a1e4ec34b8"
         }
       ]
     }
@@ -1139,9 +1273,10 @@
         "it",
         "pt",
         "nl",
-        "hu"
+        "hu",
+        "tr"
       ],
-      "version": 3,
+      "version": 4,
       "format": 1,
       "minAppVersion": 4,
       "license": "CC BY-SA 4.0",
@@ -1149,11 +1284,35 @@
       "files": [
         {
           "name": "en.sqlite",
-          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v3/en-v3.sqlite.gz",
-          "sizeBytes": 23372015,
-          "sha256": "ef77012fa0f9d61e8fe2972c75e542be348791a95fa3a254dc72eb3af2999803",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v4/en-v4.sqlite.gz",
+          "sizeBytes": 23939923,
+          "sha256": "2c0829d18b648d04d093fce389515c3edde1a8dd6b061133377f1643262afd76",
           "compression": "gzip",
-          "uncompressedSizeBytes": 59731968
+          "uncompressedSizeBytes": 61366272
+        }
+      ]
+    },
+    {
+      "id": "langpack-tr",
+      "name": "Turkish dictionary",
+      "description": "Offline Turkish dictionary from Wiktionary: meanings in English, base forms, parts of speech, pronunciation; word frequencies, stop words and grammar topics for vocabulary and grammar analysis.",
+      "language": "tr",
+      "glossLanguages": [
+        "en"
+      ],
+      "version": 4,
+      "format": 1,
+      "minAppVersion": 5,
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "files": [
+        {
+          "name": "tr.sqlite",
+          "url": "https://github.com/ikovacs85/podcast-catalog/releases/download/langpacks-v4/tr-v4.sqlite.gz",
+          "sizeBytes": 16673451,
+          "sha256": "ce7d4797e5a74c373ee2490cab2b6ee367474c6c41439071bcd23c486633e2c4",
+          "compression": "gzip",
+          "uncompressedSizeBytes": 55906304
         }
       ]
     }
